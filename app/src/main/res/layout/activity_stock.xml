@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StockActivity">
+
+    <TableRow
+        android:background="#01ba8e"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="Stock Exchange"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="Short Name"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="Country"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </TableRow>
+
+    <TableRow
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="New York Stock Exchange"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="NYSE"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="US"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+    </TableRow>
+
+    <TableRow
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="NASDAQ Stock Exchange"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="NASDAQ"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="US"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+    </TableRow>
+
+    <TableRow
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="Shanghai Stock Exchange"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="SSE"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="CN"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+    </TableRow>
+
+    <TableRow
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="Tokyo Stock Exchange"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="JPX"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="JP"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+    </TableRow>
+
+    <TableRow
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="Shenzhen Stock Exchange"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="SZSE"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="CN"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+    </TableRow>
+
+    <TableRow
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="Hong Kong Stock Exchange"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="HKEX"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="HK"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+    </TableRow>
+
+    <TableRow
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="India National Stock Exchange"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="NSE"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="IN"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+    </TableRow>
+
+    <TableRow
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="Saudi Stock Exchange"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="Tadawul"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="SA"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+    </TableRow>
+
+    <TableRow
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="London Stock Exchange"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="LSE"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="GB"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+    </TableRow>
+
+    <TableRow
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="Bombay Stock Exchange "
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="BSE"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="IN"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+    </TableRow>
+
+    <TableRow
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="Swiss Stock Exchange"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="SIX"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="CH"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+    </TableRow>
+
+    <TableRow
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="Australia Stock Exchange"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="ASX"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="AU"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+    </TableRow>
+
+    <TableRow
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="Brazil Stock Exchange"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="Bovespa"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="BR"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+    </TableRow>
+
+
+</TableLayout>
