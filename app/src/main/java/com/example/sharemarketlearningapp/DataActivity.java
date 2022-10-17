@@ -15,6 +15,10 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
 public class DataActivity extends AppCompatActivity {
 
     private LinearLayout llData;
@@ -42,6 +46,7 @@ public class DataActivity extends AppCompatActivity {
                     public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
                         for (DocumentChange documentChange : value.getDocumentChanges()) {
                             String title = documentChange.getDocument().getData().get("title").toString();
+
                             addData(title);
                         }
                     }
@@ -60,8 +65,8 @@ public class DataActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(DataActivity.this, DataDisplayActivity.class);
-                intent.putExtra("name" , name);
-                intent.putExtra("title" , title);
+                intent.putExtra("name", name);
+                intent.putExtra("title", title);
                 startActivity(intent);
             }
         });

@@ -8,15 +8,19 @@
     tools:context=".DataDisplayActivity">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:id="@+id/fabLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
+        android:src="@drawable/left"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:id="@+id/fabRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/right"
         android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
@@ -37,7 +41,6 @@
             android:paddingTop="20dp"
             android:paddingEnd="20dp"
             android:paddingBottom="20dp">
-
 
         </LinearLayout>
 
