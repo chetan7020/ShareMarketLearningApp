@@ -5,20 +5,20 @@
     android:layout_height="match_parent"
     android:background="#f5e8da"
     android:orientation="vertical"
-    tools:context=".DataActivity">
+    tools:context=".WarrenBuffetActivity">
 
     <include layout="@layout/tool_bar_layout" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="20dp">
 
         <LinearLayout
             android:id="@+id/llData"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="20dp" />
+            android:orientation="vertical" />
 
     </androidx.core.widget.NestedScrollView>
 

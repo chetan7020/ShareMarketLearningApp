@@ -15,15 +15,13 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QuerySnapshot;
 
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
-
 public class DataActivity extends AppCompatActivity {
 
     private LinearLayout llData;
     private String name;
     private FirebaseFirestore firebaseFirestore;
+    private TextView tvTitle;
+    private String tool_title = "";
 
     private void initialize() {
         llData = findViewById(R.id.llData);
@@ -31,6 +29,8 @@ public class DataActivity extends AppCompatActivity {
         name = getIntent().getExtras().getString("name");
 
         firebaseFirestore = FirebaseFirestore.getInstance();
+
+        tvTitle = findViewById(R.id.tvTitle);
     }
 
     @Override
@@ -39,6 +39,14 @@ public class DataActivity extends AppCompatActivity {
         setContentView(R.layout.activity_data);
 
         initialize();
+
+        String[] arrTitle = name.split("_", 2);
+
+        for (String i : arrTitle) {
+            tool_title = tool_title + i.substring(0, 1).toUpperCase() + i.substring(1).toLowerCase() + " ";
+        }
+
+        tvTitle.setText("Invest Mate - " + tool_title.trim());
 
         firebaseFirestore.collection(name)
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {

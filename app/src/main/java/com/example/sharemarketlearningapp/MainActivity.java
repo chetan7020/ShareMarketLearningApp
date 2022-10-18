@@ -1,19 +1,28 @@
 package com.example.sharemarketlearningapp;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class MainActivity extends AppCompatActivity {
 
     private CardView cvBasic, cvGlossary, cvAnalysis, cvRisk, cvDerivative, cvMutualFund, cvMultibagger, cvIPO, cvStockFormula, cvForexTrading,
             cvStockBroker, cvPrimaryMarket, cvCommodity, cvStockExchange;
     private FirebaseFirestore firebaseFirestore;
+    private TextView tvTitle;
+    private ImageView ivZerodha, ivUpstox, ivWarrenBuffet;
 
     private void initialize() {
         cvBasic = findViewById(R.id.cvBasic);
@@ -31,6 +40,12 @@ public class MainActivity extends AppCompatActivity {
         cvCommodity = findViewById(R.id.cvCommodity);
         cvStockExchange = findViewById(R.id.cvStockExchange);
 
+        tvTitle = findViewById(R.id.tvTitle);
+
+        ivZerodha = findViewById(R.id.ivZerodha);
+        ivUpstox = findViewById(R.id.ivUpstox);
+        ivWarrenBuffet = findViewById(R.id.ivWarrenBuffet);
+
         firebaseFirestore = FirebaseFirestore.getInstance();
     }
 
@@ -41,6 +56,32 @@ public class MainActivity extends AppCompatActivity {
 
         initialize();
 
+        tvTitle.setText("Invest Mate");
+
+        ivZerodha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri uri = Uri.parse("https://signup.zerodha.com/");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
+
+        ivUpstox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri uri = Uri.parse("https://login.upstox.com/");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
+
+        ivWarrenBuffet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this , WarrenBuffetActivity.class));
+            }
+        });
 
         cvGlossary.setOnClickListener(new View.OnClickListener() {
             @Override
