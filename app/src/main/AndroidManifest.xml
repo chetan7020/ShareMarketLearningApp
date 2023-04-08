@@ -14,6 +14,10 @@
         android:theme="@style/Theme.ShareMarketLearningApp"
         tools:targetApi="31">
         <activity
+            android:name=".DummyActivity"
+            android:exported="false">
+        </activity>
+        <activity
             android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
@@ -40,7 +44,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
 
         <meta-data
             android:name="preloaded_fonts"

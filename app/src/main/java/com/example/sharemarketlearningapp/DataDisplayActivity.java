@@ -1,7 +1,6 @@
 package com.example.sharemarketlearningapp;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -33,6 +32,7 @@ public class DataDisplayActivity extends AppCompatActivity {
     private TextView tvTitle;
     private String tool_title = "";
     private CircularProgressIndicator pbLoader;
+    int total = 0;
 
     private void initialize() {
         llData = findViewById(R.id.llData);
@@ -57,7 +57,12 @@ public class DataDisplayActivity extends AppCompatActivity {
 
         initialize();
 
-        pbLoader.setVisibility(View.VISIBLE);
+        firebaseFirestore.collection(name).addSnapshotListener(new EventListener<QuerySnapshot>() {
+            @Override
+            public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
+                total = value.size();
+            }
+        });
 
         String[] arrTitle = name.split("_", 2);
 
@@ -92,6 +97,22 @@ public class DataDisplayActivity extends AppCompatActivity {
                                                 }
                                             }
                                         });
+                            }
+                        });
+                firebaseFirestore.collection(name).whereEqualTo("title", title)
+                        .addSnapshotListener(new EventListener<QuerySnapshot>() {
+                            @Override
+                            public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
+                                llData.removeView(llData.getChildAt(0));
+                                for (DocumentChange documentChange : value.getDocumentChanges()) {
+                                    int id = Integer.parseInt(documentChange.getDocument().getData().get("id").toString());
+
+                                    if (id == 1 || id == total){
+                                        if (id == 1){
+                                            id = total ;
+                                        }
+                                    }
+                                }
                             }
                         });
 
@@ -197,7 +218,6 @@ public class DataDisplayActivity extends AppCompatActivity {
                     }
                 });
 
-        pbLoader.setVisibility(View.GONE);
     }
 
 }
